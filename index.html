@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman Ashraf Abdelfattah | Architecture Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config for Dark Gray Theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#40E0D0', // Turquoise
+                'dark': '#30c0b0',
+              },
+              // Lighter Gray theme as requested
+              dark: '#8a8a8a', // Lighter base color
+              'darker': '#7b7b7b', // Lighter cards/section color
+              'darkest': '#333333', // For footer
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    
+</head>
+
+<body class="bg-dark text-gray-100">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md shadow-sm">
+      
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+        
+        <!-- Logo / Name Link -->
+        <a href="#home" class="text-xl font-bold text-white hover:text-primary transition-colors active">
+          Abdelrahman Ashraf
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#about" class="font-medium text-gray-100 hover:text-primary">About</a>
+          <a href="#skills" class="font-medium text-gray-100 hover:text-primary">Skills</a>
+          <a href="#projects" class="font-medium text-gray-100 hover:text-primary">Projects</a>
+          <a href="#contact" class="font-medium text-gray-100 hover:text-primary">Contact</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-white hover:text-primary focus:outline-none">
+          
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </nav>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-dark/95 backdrop-blur-md shadow-lg z-40">
+        <a href="#about" class="block text-center font-medium text-white px-4 py-3 hover:bg-primary/10 hover:text-primary mobile-nav-link">About</a>
+        <a href="#skills" class="block text-center font-medium text-white px-4 py-3 hover:bg-primary/10 hover:text-primary mobile-nav-link">Skills</a>
+        <a href="#projects" class="block text-center font-medium text-white px-4 py-3 hover:bg-primary/10 hover:text-primary mobile-nav-link">Projects</a>
+        <a href="#contact" class="block text-center font-medium text-white px-4 py-3 hover:bg-primary/10 hover:text-primary mobile-nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+      <!-- Home Section -->
+      <section id="home" class="hero-section min-h-screen flex items-center pt-24 md:pt-0">
+        <div class="container mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+          
+          <!-- Text Content -->
+          <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight fade-in">
+              Abdelrahman Ashraf Abdelfattah
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-primary my-4 fade-in" style="transition-delay: 150ms;">
+              Architecture Engineer | Designer | Visual Creator
+            </p>
+            <p class="text-lg text-gray-300 mb-8 fade-in" style="transition-delay: 300ms;">
+              Turning ideas into inspiring architectural realities.
+            </p>
+            <a href="#projects" class="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary-dark transform hover:-translate-y-0.5 transition-all duration-300 fade-in" style="transition-delay: 450ms;">
+              View My Work
+            </a>
+          </div>
+          
+          <!-- Image Content -->
+          <div class="md:w-1/2 flex justify-center fade-in" style="transition-delay: 600ms;">
+            <div class="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gray-400">
+              <img 
+                src="ashf.jpeg" 
+                alt="Abdelrahman Ashraf Portrait" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400/909090/40E0D0?text=Portrait'"
+              >
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-24 bg-darker">
+        <div class="container mx-auto px-6">
+          <h2 class="section-title text-3xl font-bold text-center text-white mb-16 fade-in">
+            About Me
+          </h2>
+          
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            
+            <!-- Bio -->
+            <div class="md:w-1/2 fade-in" style="transition-delay: 150ms;">
+              <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                Hello! I'm Abdelrahman, an <strong class="font-medium text-primary">Architecture Engineering</strong> student at Tanta University with a deep passion for design, visualization, and creative project development.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                My journey in architecture is driven by a desire to blend technical precision with artistic vision. I have hands-on experience in various stages of project development, from initial <strong class="font-medium text-primary">design concepts</strong> to preparing detailed <strong class="font-medium text-primary">tender documentation</strong> and <strong class="font-medium text-primary">shop drawings</strong>.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed">
+                I thrive on bringing ideas to life, whether through meticulous architectural plans or compelling visual narratives.
+              </p>
+            </div>
+            
+            <!-- Toolkit -->
+            <div class="md:w-1/2 fade-in" style="transition-delay: 300ms;">
+              <h3 class="text-2xl font-semibold text-white mb-6">My Toolkit</h3>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                
+                <div class="flex items-center bg-dark p-4 rounded-lg shadow-md">
+                  
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6-4a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z"></path></svg>
+                  <span class="ml-3 font-medium text-white">Revit</span>
+                </div>
+                
+                <div class="flex items-center bg-dark p-4 rounded-lg shadow-md">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2zm0 0h18M5 12h14"></path></svg>
+                  <span class="ml-3 font-medium text-white">AutoCAD</span>
+                </div>
+                
+                <div class="flex items-center bg-dark p-4 rounded-lg shadow-md">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1-1m5 5v-4m0 4h-4"></path></svg>
+                  <span class="ml-3 font-medium text-white">Lumion</span>
+                </div>
+                
+                <div class="flex items-center bg-dark p-4 rounded-lg shadow-md">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
+                  <span class="ml-3 font-medium text-white">Premiere Pro</span>
+                </div>
+                
+                <div class="flex items-center bg-dark p-4 rounded-lg shadow-md">
+                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  <span class="ml-3 font-medium text-white">After Effects</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+          <h2 class="section-title text-3xl font-bold text-center text-white mb-16 fade-in">
+            My Skills
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-12">
+            
+            <!-- Architecture & Design -->
+            <div class="fade-in" style="transition-delay: 150ms;">
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center">Architecture & Design</h3>
+              <div class="space-y-6">
+                <!-- Revit -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">Revit</span>
+                    <span class="text-lg font-medium text-primary">90%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="90%"></div>
+                  </div>
+                </div>
+                <!-- AutoCAD -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">AutoCAD</span>
+                    <span class="text-lg font-medium text-primary">95%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="95%"></div>
+                  </div>
+                </div>
+                <!-- Lumion -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">Lumion</span>
+                    <span class="text-lg font-medium text-primary">85%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Documentation -->
+            <div class="fade-in" style="transition-delay: 300ms;">
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center">Documentation</h3>
+              <div class="space-y-6">
+                <!-- Tender Preparation -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">Tender Preparation</span>
+                    <span class="text-lg font-medium text-primary">80%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="80%"></div>
+                  </div>
+                </div>
+                <!-- Shop Drawings -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">Shop Drawings</span>
+                    <span class="text-lg font-medium text-primary">90%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="90%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Creative Media -->
+            <div class="fade-in" style="transition-delay: 450ms;">
+              <h3 class="text-2xl font-semibold text-white mb-6 text-center">Creative Media</h3>
+              <div class="space-y-6">
+                <!-- Premiere Pro -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">Premiere Pro</span>
+                    <span class="text-lg font-medium text-primary">85%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="85%"></div>
+                  </div>
+                </div>
+                <!-- After Effects -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-lg font-medium text-white">After Effects</span>
+                    <span class="text-lg font-medium text-primary">75%</span>
+                  </div>
+                  <div class="w-full bg-darker rounded-full h-3">
+                    <div class="bg-primary h-3 rounded-full progress-bar-inner" data-width="75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-24 bg-darker">
+        <div class="container mx-auto px-6">
+          <h2 class="section-title text-3xl font-bold text-center text-white mb-16 fade-in">
+            My Portfolio
+          </h2>
+          
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 150ms;">
+              <img src="https://placehold.co/600x400/909090/333333?text=Modern+Villa+Render" alt="Modern Villa Render" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Modern Villa Design</h3>
+                  <p class="mb-4">A concept render focusing on natural light and minimalist forms.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 2 (Video) -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 300ms;">
+              <img src="https://placehold.co/600x400/40E0D0/ffffff?text=Video+Project+Thumbnail" alt="Architectural Visualization Video" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              
+              <div class="absolute inset-0 flex items-center justify-center group-hover:hidden">
+                <svg class="w-16 h-16 text-white/70" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+              </div>
+              
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Arch-Viz Flythrough</h3>
+                  <p class="mb-4">Video editing and visualization for a commercial complex.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 450ms;">
+              <img src="https://placehold.co/600x400/aaaaaa/333333?text=Interior+Design" alt="Interior Design" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Residential Interior</h3>
+                  <p class="mb-4">Shop drawings and design for a contemporary apartment interior.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 150ms;">
+              <img src="https://placehold.co/600x400/909090/333333?text=Urban+Plaza" alt="Urban Plaza" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Urban Plaza Concept</h3>
+                  <p class="mb-4">Public space design focusing on community interaction.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 300ms;">
+              <img src="https://placehold.co/600x400/aaaaaa/333333?text=Tender+Docs" alt="Tender Documents" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Commercial Tower Docs</h3>
+                  <p class="mb-4">Preparation of tender documents and technical specifications.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project 6 (Video) -->
+            <div class="project-card bg-dark rounded-lg shadow-lg overflow-hidden relative group fade-in" style="transition-delay: 450ms;">
+              <img src="https://placehold.co/600x400/40E0D0/ffffff?text=Creative+Video" alt="Creative Video" class="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 flex items-center justify-center group-hover:hidden">
+                <svg class="w-16 h-16 text-white/70" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+              </div>
+              <div class="overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-6">
+                <div class="details text-center text-white relative">
+                  <h3 class="text-xl font-bold mb-2">Motion Graphics Reel</h3>
+                  <p class="mb-4">A short reel showcasing After Effects and video editing skills.</p>
+                  <a href="#" class="inline-block bg-white text-primary font-semibold px-5 py-2 rounded-lg hover:bg-gray-100 transition-colors">View Details</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+          <h2 class="section-title text-3xl font-bold text-center text-white mb-16 fade-in">
+            Get In Touch
+          </h2>
+          
+          
+          <div class="max-w-lg mx-auto text-center fade-in" style="transition-delay: 150ms;">
+            <h3 class="text-2xl font-semibold text-white mb-6">Connect With Me</h3>
+            <p class="text-lg text-gray-300 mb-8">
+              I'm currently available for freelance opportunities and collaborations. Feel free to reach out!
+            </p>
+            
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 text-white">
+              
+              <!-- LinkedIn -->
+              <a href="#" class="social-icon" aria-label="LinkedIn Profile">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4-74c0-1.42-.6-1.93-1.38-1.93-.78 0-1.22.52-1.42 1.04-.08.18-.1.42-.1.66V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.2 1.03 3.2 3.3z"></path></svg>
+S
+              </a>
+              
+              <!-- WhatsApp -->
+              <a href="https://wa.me/YOUR_PHONE_NUMBER" class="social-icon" aria-label="WhatsApp Profile">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.52 3.36 1.44 4.77L2 22l5.44-1.42c1.37.78 2.92 1.22 4.6.93l.26.06h.02c5.45 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm.04 18.06c-1.48 0-2.88-.4-4.06-1.16l-.29-.17-3.04.79.81-2.95-.19-.3c-.84-1.42-1.29-3.07-1.29-4.77 0-4.52 3.67-8.19 8.19-8.19 2.2 0 4.2.86 5.75 2.42 1.55 1.55 2.42 3.55 2.42 5.75 0 4.52-3.67 8.19-8.19 8.19zm-.04-1.89c4.56 0 8.26-3.7 8.26-8.26 0-4.56-3.7-8.26-8.26-8.26-4.56 0-8.26 3.7-8.26 8.26 0 4.56 3.7 8.26 8.26 8.26zm-1.87-4.13c-.11-.06-.7-.34-.81-.38-.09-.04-.15-.06-.21.06-.06.11-.25.37-.3.44-.06.07-.11.08-.2.03-.09-.06-.39-.14-.74-.46-.27-.24-.45-.4-.6-.66-.14-.24-.02-.24.1-.35.08-.07.19-.17.25-.26.06-.09.08-.15.06-.21-.02-.06-.22-.53-.3-.72-.08-.19-.16-.16-.21-.16h-.19c-.04 0-.09.02-.15.07-.24.23-.91.89-.91 2.17 0 1.29.93 2.01 1.06 2.14.12.13 1.83 2.76 4.46 3.79 2.63 1.02 2.63.68 3.1.64.47-.04 1.15-.47 1.31-.92.16-.45.16-.84.11-.92-.04-.08-.15-.13-.3-.2z"/></svg>
+              </a>
+              
+              <!-- Instagram -->
+              <a href="#" class="social-icon" aria-label="Instagram Profile">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4-8c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4 4-1.79 4-4zm-4-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm5.5-2.5c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"></path></svg>
+              </a>
+              
+              <!-- Email -->
+              <a href="mailto:email@example.com" class="social-icon" aria-label="Send an Email">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"></path></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darkest text-gray-300 py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2025 Abdelrahman Ashraf Abdelfattah | Designed with passion.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- Intersection Observer for Fade-in and Progress Bars ---
+        
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const skillSection = document.querySelector('#skills');
+
+        const observerOptions = {
+          root: null, // viewport
+          rootMargin: '0px',
+          threshold: 0.1 // 10% visible
+        };
+
+        const observerCallback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Add fade-in visibility
+              if (entry.target.classList.contains('fade-in')) {
+                entry.target.classList.add('fade-in-visible');
+              }
+              
+              // Animate progress bars when skills section is visible
+              if (entry.target === skillSection) {
+                const progressBars = skillSection.querySelectorAll('.progress-bar-inner');
+                progressBars.forEach(bar => {
+                  const targetWidth = bar.getAttribute('data-width');
+                  bar.style.width = targetWidth;
+                });
+              }
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+        if (skillSection) {
+          observer.observe(skillSection);
+        }
+        
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-open');
+        const iconClose = document.getElementById('icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        const desktopNavLinks = document.querySelectorAll('nav .hidden a');
+        const logoLink = document.querySelector('nav a[href="#home"]');
+
+        if (mobileMenuBtn && mobileMenu && iconOpen && iconClose) {
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+          });
+        }
+        
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          });
+        });
+        
+        // --- Active Nav Link Scrolling ---
+        const sections = document.querySelectorAll('section');
+        const allNavLinks = [...desktopNavLinks, ...mobileNavLinks, logoLink];
+
+        const sectionObserverForActive = new IntersectionObserver((entries) => {
+          let activeSectionId = 'home'; // Default to home
+          
+          entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+              activeSectionId = entry.target.id;
+            }
+          });
+          
+          // Find the entry for the top-most visible section
+          const visibleSections = entries.filter(e => e.isIntersecting);
+          if (visibleSections.length > 0) {
+              // Sort by which is closest to the top
+              visibleSections.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+              if (visibleSections[0].intersectionRatio >= 0.3) { // Use a slightly lower threshold for the top one
+                  activeSectionId = visibleSections[0].target.id;
+              }
+          }
+
+          allNavLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${activeSectionId}`) {
+              link.classList.add('active');
+            }
+          });
+          
+          // Special case for home (logo)
+          if (activeSectionId === 'home') {
+              logoLink.classList.add('active');
+          } else {
+              logoLink.classList.remove('active');
+          }
+
+        }, { root: null, threshold: [0.3, 0.5, 0.7] }); // Observe at multiple thresholds
+        
+        sections.forEach(section => sectionObserverForActive.observe(section));
+
+      });
+    </script>
+
+</body>
+</html>
+
